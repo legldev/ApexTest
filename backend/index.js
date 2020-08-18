@@ -10,7 +10,9 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cors())
 app.use(bodyParser.json())
 
+const scrapController = require('./scrap')
 
+app.get('/scrapIt', scrapController.cheerioScrap)
 
 const apiPort = 4000;
 app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`))
