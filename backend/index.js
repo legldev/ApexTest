@@ -13,6 +13,7 @@ app.use(bodyParser.json())
 const scrapController = require('./scrap')
 
 app.get('/scrapIt', scrapController.cheerioScrap)
+app.get('/scrapFromText', scrapController.scrapFromText)
 
 const apiPort = 4000;
 app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`))

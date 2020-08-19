@@ -1,3 +1,5 @@
+const { saveOnText } = require('./saveOnText')
+const { readText } = require('./readText')
 const axios = require('axios');
 const cheerio = require('cheerio');
 
@@ -10,10 +12,17 @@ cheerioScrap = async (req, res)  => {
         const value = el.find('dd').text();
         return { title, value };
     }).get();
+    saveOnText(presentations);
   return res.status(200).json({ success: true, data: presentations });
 }
 
+scrapFromText = async (req, res) => {
+    const text = readText("text.txt")
+    return res.status(200).json({ success: true, data: text });
+}
+
 module.exports = {
-    cheerioScrap
+    cheerioScrap,
+    scrapFromText
   };
   

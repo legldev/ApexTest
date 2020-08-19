@@ -6,9 +6,11 @@ const api = axios.create({
 
 // Endpoints
 export const scrapIt = payload => api.get(`/scrapIt`, payload)
+export const scrapFromText = payload => api.get(`/scrapFromText`, payload)
 
 const apiScrap = {
-    scrapIt
+    scrapIt,
+    scrapFromText
 }
 
 export default apiScrap
