@@ -4,3 +4,7 @@
 
 Para iniciar la app se debe hacer desde el directorio principal, que ejecuta a
 su vez ambas apps con "concurrently", simplemente ejecutar el comando "npm run dev"
+
+# EndPoints
+api get /scrapIt
+api get /scrapFromText
