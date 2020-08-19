@@ -7,4 +7,7 @@ su vez ambas apps con "concurrently", simplemente ejecutar el comando "npm run d
 
 # EndPoints
 api get /scrapIt
+Obtiene la web directamente desde la url y la guarda en un txt
+
 api get /scrapFromText
+Lee desde el txt guardado
